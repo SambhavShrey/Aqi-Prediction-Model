@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'icon.jpg' %}" type="image/x-icon">
+    <title>AQI Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1><img src="{% static 'icon.jpg' %}" alt="Icon" style="width: 504px; height: 123px;"></h1>
+        <form id="prediction-form">
+            <div class="form-group">
+                <div class="dropdown">
+                    <label for="cities">Cities:</label>
+                    <input type="text" id="cityInput" placeholder="Type to search cities">
+                    <div class="dropdown-content" id="cityDropdown">
+                        <span class="dropdown-item">Ahmedabad</span>
+                        <span class="dropdown-item">Aizawl</span>
+                        <span class="dropdown-item">Amaravati</span>
+                        <span class="dropdown-item">Amritsar</span>
+                        <span class="dropdown-item">Bengaluru</span>
+                        <span class="dropdown-item">Bhopal</span>
+                        <span class="dropdown-item">Brajrajnagar</span>
+                        <span class="dropdown-item">Chandigarh</span>
+                        <span class="dropdown-item">Chennai</span>
+                        <span class="dropdown-item">Coimbatore</span>
+                        <span class="dropdown-item">Delhi</span>
+                        <span class="dropdown-item">Ernakulam</span>
+                        <span class="dropdown-item">Gurugram</span>
+                        <span class="dropdown-item">Guwahati</span>
+                        <span class="dropdown-item">Hyderabad</span>
+                        <span class="dropdown-item">Jaipur</span>
+                        <span class="dropdown-item">Jorapokhar</span>
+                        <span class="dropdown-item">Kochi</span>
+                        <span class="dropdown-item">Kolkata</span>
+                        <span class="dropdown-item">Lucknow</span>
+                        <span class="dropdown-item">Mumbai</span>
+                        <span class="dropdown-item">Patna</span>
+                        <span class="dropdown-item">Shillong</span>
+                        <span class="dropdown-item">Talcher</span>
+                        <span class="dropdown-item">Thiruvananthapuram</span>
+                        <span class="dropdown-item">Visakhapatnam</span>
+                    </div>
+                </div>   
+                <label for="temperature">Temperature (°C):</label>
+                <input type="number" id="temperature" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="humidity">Humidity (%):</label>
+                <input type="number" id="humidity" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="wind-speed">Wind Speed (m/s):</label>
+                <input type="number" id="wind-speed" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Predict AQI</button>
+        </form>
+        <div id="prediction-result" class="hidden">
+            <h1><img src="{% static 'logo.png'%}" alt="Icon" style="width: 304px; height: 123px;"></h1>
+            <h2>AQI value: <span id="aqi-value" style="color: green;"></span></h2>
+            <h3>AQI Category: <span id="aqi-category" style="color: green;"></span></h3>
+            <h4>Sensitive Groups:</h4>
+            <p id="sensitive-groups" style="text-align: center"></p>
+            <h4>Health Effects:</h4>
+            <p id="health-effects" style="text-align: center"></p>
+            <h4>Cautionary Statements:</h4>
+            <p id="cautionary-statements" style="text-align: center"></p>
+        </div>
+    </div>
+
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

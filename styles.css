@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 2rem;
+    background-image: url("background.jpg"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;  
+    background-size: 100% 100%;
+}
+
+h1, h2, h3, h4 {  
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #fb0101; 
+}
+h5{  
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #00ff1a; 
+}
+
+.container {
+    border: none;  
+    border-radius: 5px;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.7);  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);  
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #00ff77;  
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.btn-primary {
+    background-color: #278fff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+#prediction-result {
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: #fff;  
+}
+
+#aqi-value, #aqi-category {
+    font-weight: bold;
+}
+h4 {
+    margin-top: 1rem;
+}
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown button */
+#cityInput {
+    background-color: #f1f1f1;
+    color: #333;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%; /* Ensure the input takes full width */
+}
+
+/* Dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 90%; /* Ensure the dropdown content takes full width */
+    max-height: 200px; /* Set a maximum height for the dropdown content */
+    overflow-y: auto; /* Add scrollbar if the content overflows */
+}
+
+/* Dropdown items */
+.dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%; 
+}
+
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
